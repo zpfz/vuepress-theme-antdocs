@@ -74,6 +74,6 @@ list.txt
 site/dev.js
 
 # uesless file
-antdocs/LICENSE
-antdocs/package.json
-antdocs/README.md
+vuepress-theme-antdocs/LICENSE
+vuepress-theme-antdocs/package.json
+vuepress-theme-antdocs/README.md

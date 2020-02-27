@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
 	title: "AntDocs",
-	theme: path.resolve(__dirname, "../../antdocs"),
+	theme: path.resolve(__dirname, "../../vuepress-theme-antdocs"),
 	description: "a Ant Design style theme for VuePress.",
 	base: "/",
 	head: [
