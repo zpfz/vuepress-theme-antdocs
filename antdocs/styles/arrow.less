@@ -1,0 +1,27 @@
+@import './config.less';
+.arrow {
+  display: inline-block;
+  color: @arrowBgColor;
+  transition: transform .25s ease-in-out;
+  font-size: 14px;
+
+  &.up {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid @arrowBgColor;
+  }
+
+  &.down {
+    transform: rotate(0deg);
+  }
+
+  &.right {
+    transform: rotate(-90deg);
+  }
+
+  &.left {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 6px solid @arrowBgColor;
+  }
+}
