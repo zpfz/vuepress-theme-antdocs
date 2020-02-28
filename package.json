@@ -1,7 +1,7 @@
 {
   "name": "vuepress-theme-antdocs",
   "title": "AntDocs of VuePress",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "a Ant Design style theme for VuePress.",
   "main": "index.js",
   "keywords": [
@@ -29,6 +29,7 @@
     "ant-design-vue": "^1.4.11",
     "docsearch.js": "^2.5.2",
     "lodash": "^4.17.15",
+    "core-js": "^2.6.11",
     "vuepress-plugin-container": "^2.0.2",
     "vuepress-plugin-smooth-scroll": "^0.0.3",
     "vuex": "^3.1.2",
