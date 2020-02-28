@@ -1,15 +1,16 @@
 {
   "name": "vuepress-theme-antdocs",
   "title": "AntDocs of VuePress",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a Ant Design style theme for VuePress.",
   "main": "index.js",
   "keywords": [
     "theme",
     "vuepress",
+    "vuepress-theme",
     "antd",
     "antdocs",
-    "antdesign"
+    "ant-design"
   ],
   "author": "Feng L.H.",
   "repository": {
