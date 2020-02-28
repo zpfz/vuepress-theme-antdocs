@@ -4,7 +4,11 @@
 </div>
 <div align="center">
 
-a Ant Design style theme for VuePress.  
+a Ant Design style theme for VuePress.
+
+</div>
+
+<div align="center">
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zpfz/vuepress-theme-antdocs/master?style=flat-square) ![License](https://img.shields.io/github/license/zpfz/vuepress-theme-antdocs?style=flat-square)
 
