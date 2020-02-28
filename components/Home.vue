@@ -200,8 +200,8 @@ export default {
   }
 
   .ant-btn-round.ant-btn-lg {
-    height: 2.9375rem;
-    padding: 0 25px;
+    height: 3.4rem;
+    padding: 0 1.5625rem;
   }
 }
 

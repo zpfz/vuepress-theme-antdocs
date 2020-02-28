@@ -4,7 +4,7 @@
 
 <div align="center">
 
-a Ant Design style theme for VuePress.
+A Ant Design style theme for VuePress.
 
 </div>
 

@@ -107,19 +107,22 @@ export default {
 .sidebar-heading {
   display: flex;
   align-items: center;
-  color: @textColor;
+  color: rgba(0,0,0,.65);
   transition: color 0.15s ease;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 14px;
   margin: 0.25rem auto;
-  padding: 0.35rem 1rem;
+  padding: 0.35rem 2.2rem;
   width: 100%;
   box-sizing: border-box;
   border-left: 0.25rem solid transparent;
+  transition: color .25s ease-in-out;
 
-  &.open,
-  &:hover {
+  &.open{
     color: inherit;
+  }
+  &:hover{
+    color: @accentColor;
   }
 
   .arrow {
@@ -141,7 +144,7 @@ export default {
 }
 
 .sidebar-group-items {
-  transition: height 0.1s ease-out;
+  transition: height 0.2s ease-out;
   font-size: 0.95em;
   overflow: hidden;
 }

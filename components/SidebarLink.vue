@@ -106,24 +106,22 @@ function renderExternal (h, to, text) {
 
 .sidebar .sidebar-sub-headers {
   padding-left: 1rem;
-  font-size: 0.95em;
+  font-size: 14px;
 }
 
 .sidebar-links {
   > li > a.sidebar-link {
     margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
     line-height: 2;
   }
 }
 
 a.sidebar-link {
-  font-size: 1.1em;
+  font-size: 14px;
   font-weight: 400;
   display: inline-block;
-  color: @textColor;
-  // border-right 3px solid transparent
-  padding: 0.35rem 1rem 0.35rem 1.25rem;
+  color: rgba(0,0,0,.65);
+  padding: 0.4rem 1.5rem 0.4rem 2.5rem;
   line-height: 1.4;
   width: 100%;
   box-sizing: border-box;
@@ -157,9 +155,9 @@ a.sidebar-link {
     }
   }
 
-  .sidebar-group & {
-    padding-left: 2rem;
-  }
+  // .sidebar-group & {
+  //   padding-left: 2rem;
+  // }
 
   .sidebar-sub-headers & {
     padding-top: 0.5rem;
