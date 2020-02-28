@@ -1,4 +1,4 @@
-<div align="center"><img src="https://s2.ax1x.com/2020/02/27/3aIcDK.png" height = "100" /></div>
+<p align="center"><img src="https://s2.ax1x.com/2020/02/27/3aIcDK.png" height = "100" /></p>
 <div align="center">
 <h1 align="center">AntDocs</h1>
 </div>
