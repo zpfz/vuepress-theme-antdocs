@@ -35,7 +35,11 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 
 # Preview
 
+<p align="center">
+
 ![3B3lOf.png](https://s2.ax1x.com/2020/02/28/3B3lOf.png)
+
+<p>
 
 ---
 
