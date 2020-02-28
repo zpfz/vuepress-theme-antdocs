@@ -106,7 +106,7 @@ function renderExternal (h, to, text) {
 
 .sidebar .sidebar-sub-headers {
   padding-left: 1rem;
-  font-size: 14px;
+  font-size: .875rem;
 }
 
 .sidebar-links {
@@ -117,7 +117,7 @@ function renderExternal (h, to, text) {
 }
 
 a.sidebar-link {
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 400;
   display: inline-block;
   color: rgba(0,0,0,.65);

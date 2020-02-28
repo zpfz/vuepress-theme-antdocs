@@ -14,13 +14,15 @@
 
 
 html,body {
-  background-color: #fff;
   padding: 0;
   margin: 0;
+  background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale; 
+}
+body{
+  font-size: 14px;
 }
 
 *::-webkit-scrollbar {
@@ -68,10 +70,6 @@ html,body {
   box-sizing: border-box;
   border-right: 1px solid @borderColor;
   overflow-y: auto;
-}
-
-.content__default{
-  font-size: 14px;
 }
 
 .@{contentClass}:not(.custom):extend(.wrapper) {

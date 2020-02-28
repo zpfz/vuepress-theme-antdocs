@@ -147,5 +147,11 @@ export default {
   transition: height 0.2s ease-out;
   font-size: 0.95em;
   overflow: hidden;
+
+  > li {
+    a {
+      padding-left: 3.5rem;
+    }
+  }
 }
 </style>

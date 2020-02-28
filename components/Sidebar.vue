@@ -35,7 +35,7 @@ export default {
     padding-bottom: 1.5rem;
 
     & > li > a.sidebar-link {
-      font-size: 14px;
+      font-size: .875rem;
       line-height: 2;
       transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background 0.25s ease-in-out;
     }
