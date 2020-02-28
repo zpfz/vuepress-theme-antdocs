@@ -26,6 +26,10 @@ a Ant Design style theme for VuePress.
 ```sh
 npm i vuepress-theme-antdocs
 ```
+or
+```sh
+yarn add vuepress-theme-antdocs
+```
 
 #### Use theme  
 
