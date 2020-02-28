@@ -1,8 +1,10 @@
-<div align=center><img src="https://s2.ax1x.com/2020/02/27/3aIcDK.png" height = "100" div align=center /></div>
+<div align="center"><img src="https://s2.ax1x.com/2020/02/27/3aIcDK.png" height = "100" /></div>
+<div align="center">
 <h1 align="center">AntDocs</h1>
+</div>
 <div align="center">
 
-a Ant Design style theme for VuePress.
+a Ant Design style theme for VuePress.  
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zpfz/vuepress-theme-antdocs/master?style=flat-square) ![License](https://img.shields.io/github/license/zpfz/vuepress-theme-antdocs?style=flat-square)
 
@@ -14,44 +16,37 @@ a Ant Design style theme for VuePress.
 - More features are waiting for you to discover ...
 
 # Quick start
-We recommend using npm or yarn to install, it not only makes development easier, but also allow you to take advantage of the rich ecosystem of Javascript packages and tooling.
 
-- Clone repo
-```bash
-git clone https://github.com/zpfz/vuepress-theme-antdocs.git
-cd vuepress-theme-antdocs
-```
+#### Install theme
 
-- Install dependencies
-```
-yarn install
-```
-or
-```
-npm install
+```sh
+npm i vuepress-theme-antdocs
 ```
 
-- Compiles and hot-reloads for development
-```
-yarn run docs:dev
-```
-or
-```
-npm run docs:dev
-```
+#### Use theme  
 
-- Compiles and minifies for production
+Open your `.vuepress/config.js`, and then add VuePress theme reference code:
+```js
+module.exports = {
+  theme: 'antdocs'
+}
 ```
-yarn run docs:build
-```
-or
-```
-npm run docs:build
-```
-See here for more details : [https://zpfz.github.io/vuepress-theme-antdocs/](https://zpfz.github.io/vuepress-theme-antdocs/)
+You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-theme.html#theme-shorthand)
+
+# Preview
+
+![3B3lOf.png](https://s2.ax1x.com/2020/02/28/3B3lOf.png)
 
 ---
 
-国内文档请直接访问：https://antdocs.seeyoz.cn/
+See here for more details : [https://github.com/zpfz/vuepress-theme-antdocs](https://github.com/zpfz/vuepress-theme-antdocs)  
+
+ [ PS: The document is being written, please be patient❤~]
+
+---
+
+国内文档请直接访问：[https://antdocs.seeyoz.cn/](https://antdocs.seeyoz.cn/)
+
+[ 文档正在编写中...请各位客官耐心等待~ ]
 
 ---

@@ -1,15 +1,9 @@
 {
   "name": "vuepress-theme-antdocs",
   "title": "AntDocs of VuePress",
-  "version": "0.1.0",
+  "version": "0.0.3",
   "description": "a Ant Design style theme for VuePress.",
   "main": "index.js",
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh",
-    "lint": "./node_modules/.bin/eslint --ext .js,.vue ./antdocs"
-  },
   "keywords": [
     "theme",
     "vuepress",
@@ -25,18 +19,8 @@
   "bugs": {
     "url": "https://github.com/zpfz/vuepress-theme-antdocs/issues"
   },
-  "homepage": "https://antdocs.seeyoz.cn/",
+  "homepage": "https://antdocs.seeyoz.cn",
   "license": "MIT",
-  "devDependencies": {
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-vue": "^6.2.1",
-    "less": "2.7.3",
-    "less-loader": "^5.0.0",
-    "prettier": "^1.19.1",
-    "vuepress": "^1.3.0"
-  },
   "dependencies": {
     "@vuepress/plugin-active-header-links": "^1.3.1",
     "@vuepress/plugin-nprogress": "^1.3.1",
@@ -46,6 +30,8 @@
     "lodash": "^4.17.15",
     "vuepress-plugin-container": "^2.0.2",
     "vuepress-plugin-smooth-scroll": "^0.0.3",
-    "vuex": "^3.1.2"
+    "vuex": "^3.1.2",
+    "less": "2.7.3",
+    "less-loader": "^5.0.0"
   }
 }

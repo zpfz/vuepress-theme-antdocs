@@ -69,8 +69,11 @@ export default {
     link(url) {
       url = typeof url === 'undefined' ? '' : url
       let _url = ensureExt(url)
-      _url = _url.length === 5 && _url === '.html' ? '' : _url
+      _url = _url.length === 5 && _url === '.html' ? this.geneKey() : _url
       return _url
+    },
+    geneKey(){
+      return (Math.random().toString(36).substr(2,10) + (new Date()).getTime())
     },
     currentPath(path) {
       const array = this.routesPath
@@ -178,12 +181,6 @@ export default {
   float: right;
   margin-right: 4rem;
   font-size: 1rem;
-
-  // a {
-  //   padding: 0 1.25rem;
-  //   color: inherit;
-
-  // }
 
   .repo-link {
     color: inherit;
