@@ -174,7 +174,7 @@ export default {
     justify-content: center;
     align-items: center;
     background: #fff;
-    top: 6rem;
+    top: 5rem;
     right: -40px;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
     border-radius: 0 4px 4px 0;

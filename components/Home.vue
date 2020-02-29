@@ -130,7 +130,7 @@ export default {
 
     img {
       max-width: 100%;
-      max-height: 200px;
+      max-height: 180px;
       display: block;
       margin: 3rem auto 1.5rem;
     }
@@ -270,7 +270,9 @@ export default {
 
     .feature {
       max-width: 100%;
-      padding: 0 2.5rem;
+      padding: 0 1rem;
+      margin: .5rem auto;
+      text-align: center;
     }
   }
   .footer-container {
@@ -295,10 +297,11 @@ export default {
   .home {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    padding-top: 2.8rem;
 
     .hero {
       img {
-        max-height: 210px;
+        max-height: 150px;
         margin: 2rem auto 1.2rem;
       }
 
