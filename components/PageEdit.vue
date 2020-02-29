@@ -110,8 +110,12 @@ export default {
 <style lang="less">
 @import '../styles/palette.less';
 @import "../styles/wrapper.less";
-.page-edit:extend(.wrapper) {
+.page-edit {
   // @extend @wrapper
+  & {
+    .wrapper;
+  }
+  
   padding-top: 1rem;
   padding-bottom: 1rem;
   overflow: auto;

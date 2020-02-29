@@ -118,8 +118,12 @@ function flatten(items, res) {
 <style lang="less">
 @import '../styles/palette.less';
 @import '../styles/wrapper.less';
-.page-nav:extend(.wrapper) {
+.page-nav {
   // @extend $wrapper;
+  & {
+    .wrapper;
+  }
+  
   padding-top: 1rem;
   padding-bottom: 0;
 

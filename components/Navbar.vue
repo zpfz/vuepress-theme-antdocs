@@ -118,8 +118,8 @@ export default {
   }
 
   .logo {
-    height: @navbarLogo;
-    min-width: @navbarLogo;
+    height: @navbarLogoHeight;
+    min-width: @navbarLogoHeight;
     margin: 0 0.8rem 0 2.4rem;
   }
 

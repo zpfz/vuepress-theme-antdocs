@@ -16,6 +16,18 @@ module.exports = (options, ctx) => {
   const enableSmoothScroll = themeConfig.smoothScroll === true
 
   return {
+    chainWebpack: config=> {
+      config.module
+        .rule('less')
+        .oneOf('normal')
+        .use('less-loader')
+        .options({ javascriptEnabled: true })
+        .end()
+        .end()
+        .oneOf('modules')
+        .use('less-loader')
+        .options({ javascriptEnabled: true })
+    },
     alias () {
       return {
         '@AlgoliaSearchBox': isAlgoliaSearch
