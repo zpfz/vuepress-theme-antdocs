@@ -1,8 +1,8 @@
 {
   "name": "vuepress-theme-antdocs",
   "title": "AntDocs of VuePress",
-  "version": "0.0.8-alpha",
-  "description": "a Ant Design style theme for VuePress.",
+  "version": "0.0.9-alpha",
+  "description": "A Ant Design style theme for VuePress.",
   "main": "index.js",
   "keywords": [
     "theme",
