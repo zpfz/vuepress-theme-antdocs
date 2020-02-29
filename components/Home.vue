@@ -207,7 +207,7 @@ export default {
 
 .footer {
   clear: both;
-  font-size: 14px;
+  font-size: .875rem;
   background-color: #000;
   position: relative;
   color: rgba(255, 255, 255, 0.4);
