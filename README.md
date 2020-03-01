@@ -47,14 +47,12 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 
 ---
 
+## ATTENTION
+
 See here for more details : [https://github.com/zpfz/vuepress-theme-antdocs](https://github.com/zpfz/vuepress-theme-antdocs)  
 
- [ PS: The document is being written, please be patient❤~]
+ [ PS: The document is being written, please be patient❤~You can directly access the following url and then use Google Translate to translate the document]
 
 ---
 
-国内文档请直接访问：[https://antdocs.seeyoz.cn/](https://antdocs.seeyoz.cn/)
-
-[ 文档正在编写中...请各位客官耐心等待~ ]
-
----
+文档已经发布，国内文档请直接访问：[http://antdocs.seeyoz.cn/](https://antdocs.seeyoz.cn/)
