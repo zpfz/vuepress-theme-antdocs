@@ -55,4 +55,4 @@ See here for more details : [https://github.com/zpfz/vuepress-theme-antdocs](htt
 
 ---
 
-文档已经发布，国内文档请直接访问：[http://antdocs.seeyoz.cn/](https://antdocs.seeyoz.cn/)
+文档已经发布，国内文档请直接访问：[http://antdocs.seeyoz.cn/](http://antdocs.seeyoz.cn/)
