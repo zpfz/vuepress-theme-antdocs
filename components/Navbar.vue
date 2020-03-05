@@ -110,7 +110,7 @@ export default {
   .home-link {
     display: flex;
     align-items: center;
-    line-height: @navbarHeight + 0.125rem;
+    line-height: @navbarHeight;
 
     &.no-logo{
       justify-content: center;
@@ -161,7 +161,8 @@ export default {
     width: @sidebarWidth * 0.82 !important;
   }
   .ant-drawer-body {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .drawer-handle {
     display: none;
@@ -252,10 +253,11 @@ export default {
 
     .logo {
       margin-left: 0;
+      height: 2rem;
+      min-width: 2rem;
     }
 
     .site-name {
-      // width: calc(100vw - 9.4rem);
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -271,7 +273,7 @@ export default {
     }
     .mobile-sidebar {
       display: block;
-      top: 0;
+      top: 3rem;
       border: none;
       font-size: 14px;
     }

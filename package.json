@@ -1,7 +1,7 @@
 {
   "name": "vuepress-theme-antdocs",
   "title": "AntDocs of VuePress",
-  "version": "0.1.0-beta",
+  "version": "0.1.1-beta",
   "description": "A Ant Design style theme for VuePress.",
   "main": "index.js",
   "keywords": [
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/zpfz/vuepress-theme-antdocs/issues"
   },
-  "homepage": "https://antdocs.seeyoz.cn",
+  "homepage": "http://antdocs.seeyoz.cn",
   "license": "MIT",
   "dependencies": {
     "@vuepress/plugin-active-header-links": "^1.3.1",

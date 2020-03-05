@@ -1,7 +1,12 @@
 <template>
   <div class="sidebar-button" @click="showSidebar">
     <a-icon type="bars" />
-    <a-popover placement="bottomRight" trigger="click" v-model="popover_visible" overlayClassName="reset-popover">
+    <a-popover
+      placement="bottomRight"
+      trigger="click"
+      v-model="popover_visible"
+      overlayClassName="reset-popover"
+    >
       <template slot="content">
         <NavLinks />
       </template>
@@ -10,22 +15,22 @@
 </template>
 
 <script>
-import NavLinks from '@theme/components/NavLinks.vue'
+import NavLinks from '@theme/components/NavLinks.vue';
 
 export default {
   components: { NavLinks },
   data() {
     return {
       popover_visible: false
-    }
+    };
   },
   methods: {
     showSidebar() {
-      this.$store.state.navStyle = 'inline'
-      this.popover_visible = true
+      this.$store.state.navStyle = 'inline';
+      this.popover_visible = true;
     }
   }
-}
+};
 </script>
 
 <style lang="less">
@@ -36,11 +41,11 @@ export default {
   display: none;
   position: absolute;
   padding: 0 0.6rem;
-  right: 1.1rem;
-  line-height: @navbarHeight;
+  right: .8rem;
+  // line-height: @navbarHeight;
+  top: .1875rem;
   z-index: 3;
-  border-radius: 40px;
-  font-size: 1.5625rem;
+  font-size: 1.375rem;
   color: #828282;
 
   .reset-sidebar {

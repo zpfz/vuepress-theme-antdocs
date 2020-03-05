@@ -174,4 +174,15 @@ a.sidebar-link {
     }
   }
 }
+
+@media (max-width: @MQMobile) {
+  a.sidebar-link {
+    &.active {
+      &::after {
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+}
 </style>

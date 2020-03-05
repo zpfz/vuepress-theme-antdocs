@@ -132,7 +132,7 @@ export default {
       max-width: 100%;
       max-height: 180px;
       display: block;
-      margin: 3rem auto 1.5rem;
+      margin: 5rem auto 1.5rem;
     }
 
     h1 {
