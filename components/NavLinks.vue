@@ -18,7 +18,7 @@
                 </RouterLink>
               </a-menu-item>
             </a-menu-item-group>
-            <a-menu-item :key="subItem.link" v-else>
+            <a-menu-item :key="link(subItem.link)" v-else>
               <a v-if="isExtlink(subItem.link)" :href="link(subItem.link)" target="_blank">
                 {{ subItem.text }}
                 <a-icon type="link" />
@@ -29,7 +29,7 @@
             </a-menu-item>
           </template>
         </a-sub-menu>
-        <a-menu-item :key="item.link" v-else>
+        <a-menu-item :key="link(item.link)" v-else>
           <a v-if="isExtlink(item.link)" :href="link(item.link)" target="_blank">
             {{ item.text }}
             <a-icon type="link" />

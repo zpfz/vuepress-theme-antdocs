@@ -45,6 +45,31 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 
 <p align="center"><img src="https://s2.ax1x.com/2020/02/28/3B3lOf.png"/></p>
 
+# Changlog
+
+### 0.1.2-beta
+
+- Fix the problem that the navigation bar menu does not activate the current menu item properly in some cases.
+
+### 0.1.1-beta
+
+- Optimize the display effect of mobile sidebar;
+- Optimize mobile search and menu icon display.
+
+### 0.1.0-beta
+
+- Powered by Ant Design components and used directly in .md;
+- Add bottom column, support up to 4 columns;
+- Unified preprocessor, using less syntax compatible with Ant Design style;
+- Optimize the display effect of built-in prompts, warnings, and dangerous blocks;
+- Optimize the display effect of code blocks, inline code, Blockquote, etc.;
+- Optimize the display effect of the homepage, navigation menu, Github logo, sidebar, etc.;
+- Optimize mobile display and animation effects;
+- Fix other possible bugs.
+
+### 0.0.x alpha
+Internal beta version is unstable and not recommended
+
 ---
 
 ## ATTENTION
