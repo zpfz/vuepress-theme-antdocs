@@ -1,5 +1,7 @@
 <template>
   <aside class="sidebar">
+    <!-- Add ADs here -->
+    <Ads v-if="this.$themeConfig.ads"/>
     <!-- <slot name="top" /> -->
     <SidebarLinks :depth="0" :items="items" />
     <!-- <slot name="bottom" /> -->
@@ -8,10 +10,14 @@
 
 <script>
 import SidebarLinks from '@theme/components/SidebarLinks.vue';
+import Ads from '@theme/components/Ads.vue';
 
 export default {
   name: 'Sidebar',
-  components: { SidebarLinks },
+  components: { 
+    SidebarLinks,
+    Ads
+  },
   props: ['items']
 };
 </script>

@@ -9,7 +9,7 @@
           <template v-for="(subItem, index) in item.items">
             <a-menu-item-group :title="subItem.text" v-if="subItem.type === 'links'" :key="link(subItem.link) || index">
               <a-menu-item v-for="childSubItem in subItem.items" :key="link(childSubItem.link)">
-                <a v-if="isExtlink(childSubItem.link)" :href="link(childSubItem.link)" target="_blank">
+                <a v-if="isExtlink(childSubItem.link)" :href="childSubItem.link" target="_blank" rel="noopener noreferrer">
                   {{ childSubItem.text }}
                   <a-icon type="link" />
                 </a>
@@ -19,7 +19,7 @@
               </a-menu-item>
             </a-menu-item-group>
             <a-menu-item :key="link(subItem.link)" v-else>
-              <a v-if="isExtlink(subItem.link)" :href="link(subItem.link)" target="_blank">
+              <a v-if="isExtlink(subItem.link)" :href="subItem.link" target="_blank" rel="noopener noreferrer">
                 {{ subItem.text }}
                 <a-icon type="link" />
               </a>

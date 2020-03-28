@@ -36,6 +36,8 @@
         <slot name="page-bottom" />
       </template>
     </Page>
+
+    <a-back-top v-if="$themeConfig.backToTop"/>
   </div>
 </template>
 
@@ -56,11 +58,11 @@ export default {
     Navbar
   },
 
-  data () {
-    return {
-      isSidebarOpen: false
-    }
-  },
+  // data () {
+  //   return {
+  //     isSidebarOpen: false
+  //   }
+  // },
 
   computed: {
     shouldShowNavbar () {
@@ -111,11 +113,11 @@ export default {
     }
   },
 
-  mounted () {
-    this.$router.afterEach(() => {
-      this.isSidebarOpen = false
-    })
-  },
+  // mounted () {
+  //   this.$router.afterEach(() => {
+  //     this.isSidebarOpen = false
+  //   })
+  // },
 
   // methods: {
     // toggleSidebar (to) {

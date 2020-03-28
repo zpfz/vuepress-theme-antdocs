@@ -7,9 +7,9 @@
       v-model="popover_visible"
       overlayClassName="reset-popover"
     >
-      <template slot="content">
+      <div slot="content">
         <NavLinks />
-      </template>
+      </div>
     </a-popover>
   </div>
 </template>

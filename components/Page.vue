@@ -8,7 +8,6 @@
     <PageNav v-bind="{ sidebarItems }" />
 
     <slot name="bottom" />
-    <a-back-top />
   </main>
 </template>
 

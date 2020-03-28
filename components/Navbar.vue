@@ -27,11 +27,11 @@
       wrapClassName="sidebarWrap"
       v-if="isLoad"
     >
-      <template slot="handle">
+      <div slot="handle">
         <div :class="{ 'drawer-open': sidebar_open, 'drawer-handle': true }" @click="isOpenDrawer">
           <i class="drawer-handle-icon"></i>
         </div>
-      </template>
+      </div>
       <Sidebar :items="sidebarItems" class="mobile-sidebar"></Sidebar>
     </a-drawer>
   </header>
@@ -82,7 +82,7 @@ export default {
     },
 
     isLoad() {
-      return this.$page.path !== '/' ? true : false
+      return this.$page.path !== '/' && this.$page.frontmatter.toggleBtn !== 0 ? true : false
     },
 
     sidebarItems() {
@@ -128,6 +128,9 @@ export default {
     font-weight: 500;
     color: @textColor;
     position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .links {
@@ -223,7 +226,7 @@ export default {
     display: none;
   }
 }
-@media (max-width: @MQNarrow) {
+@media (max-width: @MQMobile) {
   .navbar {
     .home-link {
       justify-content: center;

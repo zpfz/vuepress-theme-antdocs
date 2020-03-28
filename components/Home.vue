@@ -2,7 +2,7 @@
   <div>
     <main class="home" aria-labelledby="main-title">
       <header class="hero">
-        <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
+        <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" class="hero-logo"/>
 
         <h1 v-if="data.heroText !== null" id="main-title">
           {{ data.heroText || $title || 'Hello' }}
@@ -18,6 +18,14 @@
           </a>
           <RouterLink v-else :to="link(data.actionLink)">
             {{ data.actionText }}
+          </RouterLink>
+        </a-button>
+        <a-button type="primary" shape="round" size="large" ghost v-if="data.preactionText && data.preactionLink" class="pre-btn">
+          <a v-if="isExtlink(data.preactionLink)" :href="link(data.preactionLink)" target="_blank">
+            {{ data.preactionText }}
+          </a>
+          <RouterLink v-else :to="link(data.preactionLink)">
+            {{ data.preactionText }}
           </RouterLink>
         </a-button>
       </header>
@@ -52,7 +60,6 @@
       </div>
       <div :class="{ 'footer-divider': isDivider, 'footer-bottom': true }">{{ data.footer }}</div>
     </div>
-    <a-back-top />
   </div>
 </template>
 
@@ -128,7 +135,7 @@ export default {
   .hero {
     text-align: center;
 
-    img {
+    .hero-logo {
       max-width: 100%;
       max-height: 180px;
       display: block;
@@ -201,7 +208,10 @@ export default {
 
   .ant-btn-round.ant-btn-lg {
     height: 3rem;
-    padding: 0 1.5625rem;
+    padding: 0 1.5rem;
+  }
+  .pre-btn{
+    margin-left: .5rem;
   }
 }
 

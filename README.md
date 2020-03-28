@@ -10,7 +10,7 @@ An Ant Design style theme for VuePress.
 
 <div align="center">
 
-![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zpfz/vuepress-theme-antdocs/master?style=flat-square) ![License](https://img.shields.io/github/license/zpfz/vuepress-theme-antdocs?style=flat-square)
+![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zpfz/vuepress-theme-antdocs?style=flat-square) ![License](https://img.shields.io/github/license/zpfz/vuepress-theme-antdocs?style=flat-square)
 
 </div>
 
@@ -46,6 +46,13 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 <p align="center"><img src="https://s2.ax1x.com/2020/02/28/3B3lOf.png"/></p>
 
 # Changlog
+
+### 1.0.0-beta.1
+
+- Add sidebar advertising space, support three display states (picture, graphic, entertainment display);
+- Added a secondary home button, it means the maximum number of home button support is 2;
+- Optimized back to top button can be customized to open;
+- Fixed the bug that the navigation bar displayed abnormally because the title was too long.
 
 ### 0.1.2-beta
 
