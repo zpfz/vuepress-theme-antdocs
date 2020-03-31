@@ -274,6 +274,13 @@ export default {
 
 @media (max-width: @MQMobile) {
   .home {
+    .hero {
+      .hero-logo {
+        max-height: 150px;
+        margin: 2rem auto 1.2rem;
+      }
+    }
+    
     .features {
       flex-direction: column;
     }

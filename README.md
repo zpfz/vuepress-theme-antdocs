@@ -47,7 +47,7 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 
 # Changlog
 
-### 1.0.0-beta.1
+### 1.0.0
 
 - Add sidebar advertising space, support three display states (picture, graphic, entertainment display);
 - Added a secondary home button, it means the maximum number of home button support is 2;
