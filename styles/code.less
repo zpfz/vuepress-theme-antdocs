@@ -147,33 +147,25 @@ div[class*='language-'] {
 
 
 each(@codeLang, {
-  div[class*="language-@{value}"]::before {
+  div[class*="language-@{value}"]:before {
     content: "@{value}";
   }
 });
 
-div[class~='language-javascript'] {
-  &:before {
-    content: 'js';
-  }
+div[class~='language-javascript']:before {
+  content: 'js';
 }
 
-div[class~='language-typescript'] {
-  &:before {
-    content: 'ts';
-  }
+div[class~='language-typescript']:before {
+  content: 'ts';
 }
 
-div[class~='language-markup'] {
-  &:before {
-    content: 'html';
-  }
+div[class~='language-markup']:before {
+  content: 'html';
 }
 
-div[class~='language-markdown'] {
-  &:before {
-    content: 'md';
-  }
+div[class~='language-markdown']:before {
+  content: 'md';
 }
 
 div[class~='language-json']:before {
