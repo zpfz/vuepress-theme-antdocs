@@ -41,7 +41,7 @@
       </template>
     </a-menu>
     <a v-if="repoLink" :href="repoLink" class="repo-link" target="_blank" rel="noopener noreferrer">
-      <a-icon type="github" />
+       <a-icon :type="repoLabel" />
     </a>
   </nav>
 </template>
@@ -151,8 +151,13 @@ export default {
         return /^https?:/.test(repo) ? repo : `https://github.com/${repo}`
       }
       return null
+    },
+    repoLabel(){
+      let repoLabel = this.$site.themeConfig.repoLabel
+      if(repoLabel == 'GitHub') repoLabel = 'github'
+      if(repoLabel == 'GitLab') repoLabel = 'gitlab'
+      return repoLabel
     }
-
     // repoLabel () {
     //   if (!this.repoLink) return
     //   if (this.$site.themeConfig.repoLabel) {
