@@ -36,7 +36,6 @@ module.exports = (options, ctx) => {
         '@docs': `${sourceDir}${sep}.vuepress${sep}styles`
       }
     },
-    
     plugins: [
       ['@vuepress/active-header-links', options.activeHeaderLinks],
       '@vuepress/plugin-search',

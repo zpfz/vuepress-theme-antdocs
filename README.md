@@ -47,6 +47,12 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 
 # Changlog
 
+### 1.1.0
+
+- Add repo status icon: GitLab.
+- Optimize other details.
+
+
 ### 1.0.1
 
 - Fix the bug that the code block **css / cpp / c** language is displayed incorrectly.
