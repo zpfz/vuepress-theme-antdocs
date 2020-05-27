@@ -61,6 +61,9 @@ function renderLink (h, to, text, active, level) {
       activeClass: '',
       exactActiveClass: ''
     },
+    attrs:{
+      title: text
+    },
     class: {
       active,
       'sidebar-link': true
