@@ -182,7 +182,6 @@ export default {
     right: -40px;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
     border-radius: 0 4px 4px 0;
-    z-index: -1;
 
     &.drawer-open {
       .drawer-handle-icon {
