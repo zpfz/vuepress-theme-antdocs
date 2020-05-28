@@ -47,6 +47,11 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 
 # Changlog
 
+### 1.1.1
+
+- Fixed the bug that the sidebar close button displayed.
+- Added title attribute for sidebar.
+
 ### 1.1.0
 
 - Add repo status icon: GitLab.
