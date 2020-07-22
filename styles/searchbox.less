@@ -5,7 +5,7 @@
     color: rgba(0, 0, 0, 0.65) !important;
     border-radius: 0 !important;
     border: none !important;
-    border-left: 1px solid darken(@borderColor, 5%) !important;
+    border-left: 1px solid @borderColordarken5 !important;
     line-height: 1.375rem !important;
     padding-left: 2.2rem !important;
     background: #fff url('../assets/search.svg') 0.5rem 0 no-repeat !important;
@@ -24,7 +24,7 @@
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 
     &:hover {
-      background-color: fade(@accentColor, 10%) !important;
+      background-color: @accentColorfade10 !important;
     }
 
     a {
@@ -35,7 +35,7 @@
     }
 
     &.focused {
-      background-color: fade(@accentColor, 10%) !important;
+      background-color: @accentColorfade10 !important;
 
       a {
         color: @accentColor !important;
@@ -57,7 +57,7 @@
       }
       &:focus {
         border-color: @accentColor !important;
-        box-shadow: 0 0 0 2px fade(@accentColor, 20%);
+        box-shadow: 0 0 0 2px @accentColorfade20;
       }
     }
   }
@@ -83,7 +83,7 @@
         border-color: @accentColor !important;
         background-size: 1.25rem !important;
         background-position: 0.5rem 0.3rem !important;
-        box-shadow: 0 0 0 2px fade(@accentColor, 20%);
+        box-shadow: 0 0 0 2px @accentColorfade20;
       }
     }
     .suggestions {
@@ -104,7 +104,7 @@
         border-color: @accentColor !important;
         background-size: 1.25rem !important;
         background-position: 0.5rem 0.3rem !important;
-        box-shadow: 0 0 0 2px fade(@accentColor, 20%);
+        box-shadow: 0 0 0 2px @accentColorfade20;
         left: 0.625rem !important;
       }
     }

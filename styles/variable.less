@@ -1,0 +1,136 @@
+// colors
+@accentColor: #3eaf7c;
+@primary-color: @accentColor;
+
+@bodyTextColor: rgba(0, 0, 0, 0.8);
+@textColor: #2a2a2a;
+@borderColor: #eaecef;
+@codeBgColor: #282c34;
+@arrowBgColor: #ccc;
+@badgeTipColor: #19be6b;
+@badgeWarningColor: #ff9900;
+@badgeErrorColor: #ed4014;
+
+// colors - light theme
+@accentColor-light: rgba(62, 175, 124, 1);
+@textColor-light: #2c3e50;
+@borderColor-light: #eaecef;
+@codeBgColor-light: #282c34;
+@arrowBgColor-light: #ccc;
+@bodyBgColor-light: #fff;
+@badgeTipColor-light: #e7f1ec;
+@badgeWarningColor-light: #f8f2d1;
+@badgeErrorColor-light: #ffdadc;
+@bodyTextColor-light: rgba(0, 0, 0, 0.8);
+@primary-color-light: #3eaf7c;
+@sideBgColor-light: #fff;
+
+// colors - dark theme
+@accentColor-dark: rgba(245, 34, 45, 1); // rgba(62, 175, 124, 0.8);
+@textColor-dark: #e2e1db;
+@borderColor-dark: #4c525c;
+@codeBgColor-dark: #1a1c22;
+@arrowBgColor-dark: #555;
+@bodyBgColor-dark: rgba(0, 0, 0, 0.25);
+@badgeTipColor-dark: #1b4b35;
+@badgeWarningColor-dark: #574e21;
+@badgeErrorColor-dark: #692025;
+@bodyTextColor-dark: rgba(0, 0, 0, 0.8);
+@primary-color-dark: rgba(0, 0, 0, 0.5);
+@sideBgColor-dark: #363b40;
+
+[data-theme="light"]{
+  --accentColor: @accentColor-light;
+  --accentColordarken10: darken(@accentColor-light, 10%);
+  --accentColorlighten10: lighten(@accentColor-light, 10%);
+  --accentColorfade10: fade(@accentColor-light, 10%);
+  --accentColorfade20: fade(@accentColor-light, 20%);
+  --textColor: @textColor-light;
+  --textColorlighten10: lighten(@textColor-light, 10%);
+  --textColorlighten20: lighten(@textColor-light, 20%);
+  --textColorlighten25: lighten(@textColor-light, 25%);
+  --borderColor: @borderColor-light;
+  --borderColorlighten10: lighten(@borderColor-light, 10%);
+  --borderColordarken5: darken(@borderColor-light, 5%);
+  --codeBgColor: @codeBgColor-light;
+  --arrowBgColor: @arrowBgColor-light;
+  --bodyBgColor: @bodyBgColor-light;
+  --badgeTipColor: @badgeTipColor-light;
+  --badgeWarningColor: @badgeWarningColor-light;
+  --badgeErrorColor: @badgeErrorColor-light;
+  --bodyTextColor: @bodyTextColor-light;
+  --bodyTextColorlighten10: lighten(@bodyTextColor-light, 10%);
+  --sideBgColor: @sideBgColor-light;
+}
+[data-theme="dark"]{
+  --accentColor: @accentColor-dark;
+  --accentColordarken10: darken(@accentColor-dark, 10%);
+  --accentColorlighten10: lighten(@accentColor-dark, 10%);
+  --accentColorfade10: fade(@accentColor-dark, 10%);
+  --accentColorfade20: fade(@accentColor-dark, 20%);
+  --textColor: @textColor-dark;
+  --textColorlighten10: lighten(@textColor-dark, 10%);
+  --textColorlighten20: lighten(@textColor-dark, 20%);
+  --textColorlighten25: lighten(@textColor-dark, 25%);
+  --borderColor: @borderColor-dark;
+  --borderColorlighten10: lighten(@borderColor-dark, 10%);
+  --borderColordarken5: darken(@borderColor-dark, 5%);
+  --codeBgColor: @codeBgColor-dark;
+  --arrowBgColor: @arrowBgColor-dark;
+  --bodyBgColor: @bodyBgColor-dark;
+  --badgeTipColor: @badgeTipColor-dark;
+  --badgeWarningColor: @badgeWarningColor-dark;
+  --badgeErrorColor: @badgeErrorColor-dark;
+  --bodyTextColor: @bodyTextColor-dark;
+  --bodyTextColorlighten10: lighten(@bodyTextColor-dark, 10%);
+  --sideBgColor: @sideBgColor-dark;
+}
+@accentColor: var(--accentColor);
+@accentColordarken10: var(--accentColordarken10);
+@accentColorlighten10: var(--accentColorlighten10);
+@accentColorfade10: var(--accentColorfade10);
+@accentColorfade20: var(--accentColorfade20);
+@textColor: var(--textColor);
+@textColorlighten10: var(--textColorlighten10);
+@textColorlighten20: var(--textColorlighten20);
+@textColorlighten25: var(--textColorlighten25);
+@borderColor: var(--borderColor);
+@borderColorlighten10: var(--borderColorlighten10);
+@borderColordarken5: var(--borderColordarken5);
+@codeBgColor: var(--codeBgColor);
+@arrowBgColor: var(--arrowBgColor);
+@bodyBgColor: var(--bodyBgColor);
+@badgeTipColor: var(--badgeTipColor);
+@badgeWarningColor: var(--badgeWarningColor);
+@badgeErrorColor: var(--badgeErrorColor);
+@bodyTextColor: var(--bodyTextColor);
+@bodyTextColorlighten10: var(--bodyTextColorlighten10);
+@sideBgColor: var(--sideBgColor);
+
+@primary-color: #3eaf7c;
+@dropShadowColor: #111112;
+@colorTextColor: #096dd9;
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}

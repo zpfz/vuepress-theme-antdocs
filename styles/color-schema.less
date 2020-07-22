@@ -1,0 +1,395 @@
+// Badge.vue
+.badge {
+  color: white;
+  background-color: @badgeTipColor !important;
+  &.tip, &.green {
+    background-color: @badgeTipColor !important;
+  }
+  &.error {
+    background-color: @badgeErrorColor !important;
+  }
+  &.warning, &.warn, &.yellow {
+    background-color: @badgeWarningColor !important;
+  }
+}
+
+// Ads.vue
+.ads {
+  #ads_3 {
+    .ads_title {
+      color: #777;
+    }
+  }
+}
+
+// AlgoliaSearchBox.vue
+.algolia-search-wrapper {
+  .algolia-autocomplete {
+    .ds-dropdown-menu {
+      background-color: #fff;
+      &:before {
+        border-color: #999;
+      }
+      .ds-suggestion {
+        border-bottom: 1px solid @borderColor !important;
+      }
+    }
+
+    .algolia-docsearch-suggestion--highlight {
+      color: #2c815b;
+    }
+    .algolia-docsearch-suggestion {
+      border-color: @borderColor !important;
+      .algolia-docsearch-suggestion--category-header {
+        background: @accentColor !important;
+        color: #fff;
+      }
+      .algolia-docsearch-suggestion--title {
+        color: @textColor !important;
+      }
+      .algolia-docsearch-suggestion--subcategory-column {
+        border-color: @borderColor !important;
+      }
+      .algolia-docsearch-suggestion--subcategory-column-text {
+        color: #555;
+      }
+    }
+    .algolia-docsearch-footer {
+      border-color: @borderColor !important;
+    }
+    .ds-cursor .algolia-docsearch-suggestion--content {
+      background-color: #e7edf3 !important;
+      color: @textColor !important;
+    }
+  }
+}
+
+// Home.vue
+.home {
+  .hero {
+    h1{
+      color: @bodyTextColor !important;
+    }
+    .description {
+      color: @bodyTextColor !important;
+    }
+    .action-button {
+      color: #fff;
+      background-color: @accentColor !important;
+      border-bottom: 1px solid @accentColordarken10 !important;
+      &:hover {
+        background-color: @accentColorlighten10 !important;
+      }
+    }
+  }
+  .feature {
+    h2 {
+      color: @bodyTextColorlighten10 !important;
+    }
+
+    p {
+      color: @bodyTextColorlighten10 !important;
+    }
+  }
+}
+
+.footer {
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.4);
+  .footer-container {
+    h2 {
+      color: #fff;
+    }
+    .footer-item {
+      a {
+        color: #fff;
+      }
+      a:hover {
+        color: @accentColor !important;
+      }
+    }
+  }
+}
+
+// Navbar.vue
+.navbar {
+  filter: drop-shadow(0px 1px 1px @dropShadowColor);
+  .site-name {
+    color: @textColor !important;
+  }
+  .links {
+    background-color: white;
+  }
+}
+
+// NavLinks.vue
+.nav-links {
+  .repo-link {
+    color: inherit;
+    &:hover {
+      color: @accentColor !important;
+    }
+  }
+}
+
+// PageEdit.vue
+.page-edit {
+  .edit-link {
+    a {
+      color: @colorTextColor !important;
+    }
+  }
+  .last-updated {
+    .prefix {
+      color: @colorTextColor !important;
+    }
+    .time {
+      color: @accentColor !important;
+    }
+  }
+}
+
+// PageNav.vue
+.page-nav {
+  .inner {
+    border-top: 1px solid @borderColor !important;
+  }
+}
+
+// Sidebar.vue
+.sidebar {
+  border-right: 0.5px solid @borderColorlighten10 !important;
+  & > .sidebar-links {
+    & > li > a.sidebar-link {
+      transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+        background 0.25s ease-in-out;
+    }
+  }
+}
+
+.sidebar {
+  background-color: var(--light);
+  opacity: .8;
+  filter: brightness(.8) contrast(1.2);
+}
+
+.sidebarWrap .mobile-sidebar {
+  background-color: var(--light) !important;
+  opacity: .8;
+  filter: brightness(.8) contrast(1.2);
+}
+
+// SidebarButton.vue
+.sidebar-button {
+  color: #828282;
+}
+
+// SidebarGroup.vue
+.sidebar-group {
+  &:not(.collapsable) {
+    .sidebar-heading:not(.clickable) {
+      color: inherit;
+    }
+  }
+}
+
+.sidebar-heading {
+  color: rgba(0,0,0,.65);
+  transition: color 0.15s ease;
+  transition: color .25s ease-in-out;
+  &.open{
+    color: inherit;
+  }
+  &:hover{
+    color: @accentColor !important;
+  }
+  &.clickable {
+    &.active {
+      color: @accentColor !important;
+      border-left-color: @accentColor !important;
+    }
+    &:hover {
+      color: @accentColor !important;
+    }
+  }
+}
+
+// SidebarLink.vue
+a.sidebar-link {
+  &::after {
+    border-right: 3px solid @accentColor !important;
+  }
+  &:hover {
+    color: @accentColor !important;
+  }
+  &.active {
+    color: @accentColor !important;
+    background-color: @accentColorfade10 !important;
+  }
+  .sidebar-sub-headers & {
+    &.active {
+      background-color: transparent;
+    }
+  }
+}
+
+// body Color
+html,body{
+  background-color: @bodyBgColor !important;
+}
+
+// search
+.search-box {
+  input {
+    border-radius: 2rem !important;
+  }
+}
+
+.sidebar {
+  top: 4.1rem !important;
+}
+
+.ant-row{
+  background-color: @borderColor;
+  transition: background 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
+.ant-menu{
+  background-color: @borderColor;
+}
+.ant-menu-horizontal > .ant-menu-item-selected > a{
+  color: @accentColor !important;
+  font-weight: bolder;
+}
+.ant-menu-horizontal > .ant-menu-item > a:hover{
+  color: @accentColor;
+}
+.ant-menu-horizontal > .ant-menu-item > a{
+  color: @textColor;
+}
+.ant-menu-item > a:hover{
+  color: @accentColor;
+}
+.ant-menu-item > a{
+  color: @textColor;
+}
+.ant-menu-item-selected > a{
+  color: @accentColor;
+  font-weight: bolder;
+}
+.ant-menu:not(.ant-menu-horizontal) > .ant-menu-item-selected{
+  background-color: @borderColordarken5;
+}
+.ant-btn-primary{
+  background-color: @borderColor;
+  border-color: @borderColor;
+}
+.ant-btn-primary:hover {
+  background-color: @borderColor;
+  border-color: @accentColor;
+}
+.ant-btn-primary:focus {
+  background-color: @borderColor;
+  border-color: @borderColor;
+}
+.ant-drawer-wrapper-body {
+  background-color: @borderColordarken5;
+}
+.ant-menu-submenu > .ant-menu {
+  background-color: @borderColor;
+}
+.nav-links .ant-menu-inline {
+  color: @textColor;
+}
+.ant-menu-horizontal > .ant-menu-submenu {
+  color: @textColor;
+}
+.ant-menu-submenu-title:hover {
+  color: @accentColor;
+}
+.ant-menu-horizontal > .ant-menu-submenu-selected {
+  border-bottom: 2px solid @accentColor;
+}
+.nav-links > .repo-link{
+  color: @textColor !important;
+}
+.ant-menu-submenu-selected {
+  color: @accentColor;
+}
+
+.icon.outbound {
+  color: @accentColorlighten10;
+}
+
+hr {
+  border-top: 1px solid @textColor !important;
+}
+
+.icon.outbound {
+  color: @bodyTextColorlighten10 !important;
+}
+.custom-block.tip {
+  border-radius: 6px;
+  color: @textColor !important;
+  background-color: @badgeTipColor !important;
+  // border-color: @badgeTipColor !important;
+}
+.custom-block.warning {
+  border-radius: 6px;
+  color: @textColor !important;
+  background-color: @badgeWarningColor !important;
+  // border-color: @badgeWarningColor !important;
+}
+.custom-block.danger {
+  border-radius: 6px;
+  color: @textColor !important;
+  background-color: @badgeErrorColor !important;
+  // border-color: @badgeErrorColor !important;
+}
+.custom-block.details {
+  border-radius: 6px;
+  color: @textColor !important;
+  background-color: @borderColor !important;
+  // border-color: @borderColor !important;
+}
+
+[data-theme="dark"] .theme-antdocs-content:not(.custom) img {
+  opacity: .8;
+  filter: brightness(.8) contrast(1.2);
+}
+
+[data-theme="dark"] .medium-zoom-image--opened {
+  opacity: .8;
+  filter: brightness(.8) contrast(1.2);
+}
+
+[data-theme="dark"] .theme-container.no-sidebar .page {
+  background-color: @bodyBgColor;
+}
+
+[data-theme="dark"] .theme-container.about-page .page {
+  background-color: @bodyBgColor !important;
+}
+
+[data-theme="dark"] .about-card .card {
+  background-color: unset !important;
+}
+
+[data-theme="dark"] .md-card.show-border {
+  background-color: @bodyBgColor !important;
+}
+
+[data-theme="dark"] .sidebarWrap .drawer-handle {
+  opacity: .8;
+  filter: brightness(.8) contrast(1.2);
+}
+
+.card {
+  color: @textColor !important;
+}
+.about-card .card .actions .button {
+  background-color: @accentColorfade20 !important;
+  color: @accentColor !important;
+}
+.md-card .card-content p, ul, ol {
+  color: @textColor !important;
+}

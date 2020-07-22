@@ -11,11 +11,13 @@
           v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"
           class="mobile-search"
         />
+        <ThemeSwitcher class="switch-mobile" />
       </a-col>
       <a-col :xs="0" :sm="0" :md="18" :lg="19" :xl="19" :xxl="20">
         <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
         <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-        <NavLinks class="can-hide" />
+        <ThemeSwitcher class="can-hide" />
+        <NavLinks class="switch-hide" />
       </a-col>
     </a-row>
 
@@ -44,11 +46,13 @@ import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
+import ThemeSwitcher from '@theme/components/ThemeSwitcher.vue'
 
 export default {
   name: 'Navbar',
 
   components: {
+    ThemeSwitcher,
     SidebarButton,
     NavLinks,
     SearchBox,
@@ -155,10 +159,20 @@ export default {
     cursor: pointer;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 1.5rem;
     z-index: 2;
   }
+
+  .switch-mobile {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
 }
+
 .sidebarWrap {
   .ant-drawer-content-wrapper {
     width: @sidebarWidth * 0.82 !important;
@@ -249,6 +263,11 @@ export default {
       display: none;
     }
 
+
+    .switch-hide {
+      display: none;
+    }
+
     .links {
       padding-left: 1.5rem;
     }
@@ -266,6 +285,12 @@ export default {
     }
 
     .mobile-search {
+      display: block;
+    }
+
+    .switch-mobile {
+      width: 2rem;
+      padding: 0 0;
       display: block;
     }
   }
