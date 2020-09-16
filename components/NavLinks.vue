@@ -59,7 +59,11 @@ export default {
     }
   },
   created() {
-    this.routesPath = JSON.stringify(this.$themeConfig.nav)
+    this.routesPath = JSON.stringify(
+      this.$themeConfig.locales
+        ? this.$themeConfig.locales[this.$localePath].nav
+        : this.$themeConfig.nav
+    )
   },
   methods: {
     isExtlink(path) {
@@ -138,11 +142,13 @@ export default {
     },
 
     userLinks() {
-      return (this.nav || []).map(link => {
+      const curNav = (this.nav || []).map(link => {
         return Object.assign(resolveNavLinkItem(link), {
           items: (link.items || []).map(resolveNavLinkItem)
         })
       })
+      this.routesPath = JSON.stringify(curNav)
+      return curNav
     },
 
     repoLink() {
