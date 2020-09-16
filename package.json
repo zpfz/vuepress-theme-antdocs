@@ -1,7 +1,7 @@
 {
   "name": "vuepress-theme-antdocs",
   "title": "AntDocs of VuePress",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "An Ant Design style theme for VuePress.",
   "main": "index.js",
   "keywords": [
@@ -20,13 +20,13 @@
   "bugs": {
     "url": "https://github.com/zpfz/vuepress-theme-antdocs/issues"
   },
-  "homepage": "http://antdocs.seeyoz.cn",
+  "homepage": "https://antdocs.seeyoz.cn",
   "license": "MIT",
   "dependencies": {
-    "@vuepress/plugin-active-header-links": "^1.5.0",
-    "@vuepress/plugin-nprogress": "^1.5.0",
-    "@vuepress/plugin-search": "^1.5.0",
-    "ant-design-vue": "^1.6.4",
+    "@vuepress/plugin-active-header-links": "^1.5.4",
+    "@vuepress/plugin-nprogress": "^1.5.4",
+    "@vuepress/plugin-search": "^1.5.4",
+    "ant-design-vue": "^1.6.5",
     "docsearch.js": "^2.5.2",
     "lodash": "^4.17.15",
     "core-js": "^2.6.11",
