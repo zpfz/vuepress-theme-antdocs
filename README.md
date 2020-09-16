@@ -1,18 +1,18 @@
 <p align="center"><a href="https://github.com/zpfz/vuepress-theme-antdocs" target="_blank" rel="nofollow"><img width="120" src="https://s2.ax1x.com/2020/02/27/3aIcDK.png" alt="AntDocs logo"></a></p>
 
-<h1 align="center">AntDocs</h1>
+<h2 align="center">AntDocs</h2>
 
-<div align="center">
+<p align="center">
 
 An Ant Design style theme for VuePress.
 
-</div>
+</p>
 
-<div align="center">
+<p align="center">
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zpfz/vuepress-theme-antdocs?style=flat-square) ![License](https://img.shields.io/github/license/zpfz/vuepress-theme-antdocs?style=flat-square)
 
-</div>
+</p>
 
 # Features
 - Equipped with Ant Design style, you can directly use various components of the UI library.
