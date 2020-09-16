@@ -1,4 +1,4 @@
-<div align="center"><img src="https://s2.ax1x.com/2020/02/27/3aIcDK.png" height = "150" /></div>
+<p align="center"><a href="https://github.com/zpfz/vuepress-theme-antdocs" target="_blank" rel="nofollow"><img width="120" src="https://s2.ax1x.com/2020/02/27/3aIcDK.png" alt="AntDocs logo"></a></p>
 
 <h1 align="center">AntDocs</h1>
 
@@ -47,51 +47,9 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 
 # Changlog
 
-### 1.1.1
+### 1.2.0
 
-- Fixed the bug that the sidebar close button displayed.
-- Added title attribute for sidebar.
-
-### 1.1.0
-
-- Add repo status icon: GitLab.
-- Optimize other details.
-
-
-### 1.0.1
-
-- Fix the bug that the code block **css / cpp / c** language is displayed incorrectly.
-- Optimize other details.
-
-### 1.0.0
-
-- Add sidebar advertising space, support three display states (picture, graphic, entertainment display);
-- Added a secondary home button, it means the maximum number of home button support is 2;
-- Optimized back to top button can be customized to open;
-- Fixed the bug that the navigation bar displayed abnormally because the title was too long.
-
-### 0.1.2-beta
-
-- Fix the problem that the navigation bar menu does not activate the current menu item properly in some cases.
-
-### 0.1.1-beta
-
-- Optimize the display effect of mobile sidebar;
-- Optimize mobile search and menu icon display.
-
-### 0.1.0-beta
-
-- Powered by Ant Design components and used directly in .md;
-- Add bottom column, support up to 4 columns;
-- Unified preprocessor, using less syntax compatible with Ant Design style;
-- Optimize the display effect of built-in prompts, warnings, and dangerous blocks;
-- Optimize the display effect of code blocks, inline code, Blockquote, etc.;
-- Optimize the display effect of the homepage, navigation menu, Github logo, sidebar, etc.;
-- Optimize mobile display and animation effects;
-- Fix other possible bugs.
-
-### 0.0.x alpha
-Internal beta version is unstable and not recommended
+- **[feat]** Add internationalization.
 
 ---
 
