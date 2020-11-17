@@ -2,16 +2,13 @@
 
 <h2 align="center">AntDocs</h2>
 
-<p align="center">
-
-An Ant Design style theme for VuePress.
-
-</p>
+<p align="center">An Ant Design style theme for VuePress.</p>
 
 <p align="center">
-
-![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zpfz/vuepress-theme-antdocs?style=flat-square) ![License](https://img.shields.io/github/license/zpfz/vuepress-theme-antdocs?style=flat-square)
-
+  <img src="https://img.shields.io/badge/build-passing-brightgreen?style=flat-square" alt="Build Status">
+  <img src="https://img.shields.io/npm/dt/vuepress-theme-antdocs?style=flat-square&color=red" alt="Downloads">
+  <img src="https://img.shields.io/github/package-json/v/zpfz/vuepress-theme-antdocs?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/github/license/zpfz/vuepress-theme-antdocs?style=flat-square" alt="License">
 </p>
 
 # Features
@@ -44,14 +41,6 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 # Preview
 
 <p align="center"><img src="https://s2.ax1x.com/2020/02/28/3B3lOf.png"/></p>
-
-# Changlog
-
-### 1.2.0
-
-- **[feat]** Add internationalization.
-
----
 
 ## ATTENTION
 
