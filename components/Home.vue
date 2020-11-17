@@ -58,7 +58,7 @@
           </a-col>
         </a-row>
       </div>
-      <div :class="{ 'footer-divider': isDivider, 'footer-bottom': true }">{{ data.footer }}</div>
+      <div :class="{ 'footer-divider': isDivider, 'footer-bottom': true }" v-html="data.footer"></div>
     </div>
   </div>
 </template>
@@ -87,6 +87,7 @@ export default {
     }
   },
   mounted() {
+    console.log(this.data.footer)
     if (this.data.footerWrap && this.data.footerWrap.length) {
       this.isDivider = true
     }
