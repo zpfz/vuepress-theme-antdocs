@@ -87,7 +87,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.data.footer)
     if (this.data.footerWrap && this.data.footerWrap.length) {
       this.isDivider = true
     }
