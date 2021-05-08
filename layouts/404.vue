@@ -1,6 +1,6 @@
 <template>
   <div class="theme-container">
-    <div class="theme-antdocs-content">
+    <div class="theme-antdocs-content page-404">
       <h1>404</h1>
 
       <blockquote>{{ getMsg() }}</blockquote>
@@ -28,3 +28,10 @@ export default {
   }
 }
 </script>
+<style lang="less">
+@import '../styles/palette.less';
+.page-404{
+  max-width: @contentWidthNoSidebar !important;
+  padding: 0 2.5rem !important;
+}
+</style>
