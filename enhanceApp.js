@@ -4,9 +4,9 @@ import './styles/index.less';
 
 export default ({
   Vue,
-  options,
-  router,
-  siteData,
+  // options,
+  // router,
+  // siteData,
 }) => {
   Vue.mixin({ store })
   Vue.use(Antd)
