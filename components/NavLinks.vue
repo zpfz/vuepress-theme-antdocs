@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { resolveNavLinkItem, isExternal, ensureExt } from '../util'
+import { resolveNavLinkItem, ensureExt } from '../util'
 
 export default {
   name: 'NavLinks',
