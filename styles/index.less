@@ -75,6 +75,11 @@ body{
   & {
     .wrapper;
   }
+
+  > *:first-child{
+    margin-top: @navbarHeight + 2rem;
+  }
+
   p.demo {
     padding: 1rem 1.5rem;
     border: 1px solid #ddd;
@@ -113,6 +118,7 @@ p a code {
 
 p{
   margin-bottom: .4em;
+  text-align: justify;
 }
 
 kbd {
@@ -242,6 +248,13 @@ th, td {
 
     .sidebar {
       top: 0;
+    }
+  }
+  &.no-sidebar {
+    .@{contentClass}:not(.custom) {
+      max-width: @contentWidthNoSidebar;
+      margin: 0 auto;
+      padding: 0 2.5rem;
     }
   }
 }
