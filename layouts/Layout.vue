@@ -14,6 +14,7 @@
 
     <Sidebar
       :items="sidebarItems"
+      v-if="shouldShowSidebar"
     >
       <template #top>
         <slot name="sidebar-top" />
@@ -114,9 +115,9 @@ export default {
   },
 
   // mounted () {
-  //   this.$router.afterEach(() => {
-  //     this.isSidebarOpen = false
-  //   })
+    // this.$router.afterEach(() => {
+    //   this.isSidebarOpen = false
+    // })
   // },
 
   // methods: {
