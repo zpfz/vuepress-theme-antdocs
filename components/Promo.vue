@@ -94,7 +94,7 @@ export default {
 }
 
 @media (max-width: @MQMobile) {
-  .ads {
+  .promo {
     display: @MobileShow;
   }
   #reset-margin {
