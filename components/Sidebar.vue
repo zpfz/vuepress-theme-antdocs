@@ -1,7 +1,7 @@
 <template>
   <aside class="sidebar">
-    <!-- Add ADs here -->
-    <Ads v-if="this.$themeConfig.ads"/>
+    <!-- Promo ADs here -->
+    <Promo v-if="this.$themeConfig.ads"/>
     <!-- <slot name="top" /> -->
     <SidebarLinks :depth="0" :items="items" />
     <!-- <slot name="bottom" /> -->
@@ -10,13 +10,13 @@
 
 <script>
 import SidebarLinks from '@theme/components/SidebarLinks.vue';
-import Ads from '@theme/components/Ads.vue';
+import Promo from '@theme/components/Promo.vue';
 
 export default {
   name: 'Sidebar',
   components: { 
     SidebarLinks,
-    Ads
+    Promo
   },
   props: ['items']
 };
@@ -43,8 +43,7 @@ export default {
     & > li > a.sidebar-link {
       font-size: 0.875rem;
       line-height: 2;
-      transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
-        background 0.25s ease-in-out;
+      transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background 0.25s ease-in-out;
     }
   }
 }
