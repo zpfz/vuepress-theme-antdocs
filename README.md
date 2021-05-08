@@ -41,13 +41,3 @@ You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-
 # Preview
 
 <p align="center"><img src="https://s2.ax1x.com/2020/02/28/3B3lOf.png"/></p>
-
-## ATTENTION
-
-See here for more details : [https://github.com/zpfz/vuepress-theme-antdocs](https://github.com/zpfz/vuepress-theme-antdocs)  
-
- [ PS: The document is being written, please be patient❤~You can directly access the following url and then use Google Translate to translate the document]
-
----
-
-文档已经发布，国内文档请直接访问：[http://antdocs.seeyoz.cn/](http://antdocs.seeyoz.cn/)
