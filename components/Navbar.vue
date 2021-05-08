@@ -1,7 +1,7 @@
 <template>
   <header class="navbar">
     <a-row>
-      <SidebarButton />
+      <NavButton />
       <a-col :xs="24" :sm="24" :md="6" :lg="5" :xl="5" :xxl="4">
         <RouterLink :to="$localePath" :class="{'no-logo': !$site.themeConfig.logo ? true : false,'home-link': true}">
           <img v-if="$site.themeConfig.logo" class="logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle" />
@@ -25,7 +25,7 @@
       @close="isOpenDrawer"
       :visible="sidebar_visible"
       wrapClassName="sidebarWrap"
-      v-if="isLoad"
+      v-if="shouldShowSidebar"
     >
       <div slot="handle">
         <div :class="{ 'drawer-open': sidebar_open, 'drawer-handle': true }" @click="isOpenDrawer">
@@ -40,7 +40,7 @@
 <script>
 import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
-import SidebarButton from '@theme/components/SidebarButton.vue'
+import NavButton from '@theme/components/NavButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
@@ -49,7 +49,7 @@ export default {
   name: 'Navbar',
 
   components: {
-    SidebarButton,
+    NavButton,
     NavLinks,
     SearchBox,
     AlgoliaSearchBox,
@@ -81,9 +81,18 @@ export default {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName
     },
 
-    isLoad() {
-      return this.$page.path !== '/' && this.$page.frontmatter.toggleBtn !== 0 ? true : false
+    shouldShowSidebar () {
+      const { frontmatter } = this.$page
+      return (
+        !frontmatter.home
+        && frontmatter.sidebar !== false
+        && this.sidebarItems.length
+      )
     },
+
+    // isLoad() {
+    //   return this.$page.path !== '/' && !this.shouldShowSidebar
+    // },
 
     sidebarItems() {
       return resolveSidebarItems(this.$page, this.$page.regularPath, this.$site, this.$localePath)
