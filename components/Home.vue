@@ -12,20 +12,20 @@
           {{ data.tagline || $description || 'Welcome to your VuePress site' }}
         </p>
 
-        <a-button type="primary" shape="round" size="large" ghost v-if="data.actionText && data.actionLink">
-          <a v-if="isExtlink(data.actionLink)" :href="link(data.actionLink)" target="_blank">
-            {{ data.actionText }}
+        <a-button :type="actionBtn.type" :shape="actionBtn.shape" :size="actionBtn.size" :ghost="actionBtn.ghost" v-if="actionBtn.text && actionBtn.link">
+          <a v-if="isExtlink(actionBtn.link)" :href="link(actionBtn.link)" target="_blank">
+            {{ actionBtn.text }}
           </a>
-          <RouterLink v-else :to="link(data.actionLink)">
-            {{ data.actionText }}
+          <RouterLink v-else :to="link(actionBtn.link)">
+            {{ actionBtn.text }}
           </RouterLink>
         </a-button>
-        <a-button type="primary" shape="round" size="large" ghost v-if="data.preactionText && data.preactionLink" class="pre-btn">
-          <a v-if="isExtlink(data.preactionLink)" :href="link(data.preactionLink)" target="_blank">
-            {{ data.preactionText }}
+        <a-button :type="preactionBtn.type" :shape="preactionBtn.shape" :size="preactionBtn.size" :ghost="preactionBtn.ghost" v-if="preactionBtn.text && preactionBtn.link" class="pre-btn">
+          <a v-if="isExtlink(preactionBtn.link)" :href="link(preactionBtn.link)" target="_blank">
+            {{ preactionBtn.text }}
           </a>
-          <RouterLink v-else :to="link(data.preactionLink)">
-            {{ data.preactionText }}
+          <RouterLink v-else :to="link(preactionBtn.link)">
+            {{ preactionBtn.text }}
           </RouterLink>
         </a-button>
       </header>
@@ -95,13 +95,28 @@ export default {
     data() {
       return this.$page.frontmatter
     },
-    actionLink() {
+    actionBtn() {
+      const actionBtn = this.data.actionBtn
       return {
-        link: this.data.actionLink,
-        text: this.data.actionText
+        link: actionBtn.link,
+        text: actionBtn.text,
+        ghost: actionBtn.ghost ?? false,
+        type: actionBtn.type ?? 'primary',
+        size: actionBtn.size ?? 'large',
+        shape: actionBtn.shape ?? null
       }
     },
-
+    preactionBtn() {
+      const preactionBtn = this.data.preactionBtn
+      return {
+        link: preactionBtn.link,
+        text: preactionBtn.text,
+        ghost: preactionBtn.ghost ?? false,
+        type: preactionBtn.type ?? 'primary',
+        size: preactionBtn.size ?? 'large',
+        shape: preactionBtn.shape ?? null
+      }
+    },
     footerColumn() {
       if (this.data.footerWrap && this.data.footerWrap.length) {
         if (this.data.footerColumn !== null || this.data.footerColumn > 0) {
@@ -159,21 +174,21 @@ export default {
       color: #949494;
     }
 
-    .action-button {
-      display: inline-block;
-      font-size: 1.2rem;
-      color: #fff;
-      background-color: @accentColor;
-      padding: 0.8rem 1.6rem;
-      border-radius: 4px;
-      transition: background-color 0.1s ease;
-      box-sizing: border-box;
-      border-bottom: 1px solid darken(@accentColor, 10%);
+    // .action-button {
+    //   display: inline-block;
+    //   font-size: 1.2rem;
+    //   color: #fff;
+    //   background-color: @accentColor;
+    //   padding: 0.8rem 1.6rem;
+    //   border-radius: 4px;
+    //   transition: background-color 0.1s ease;
+    //   box-sizing: border-box;
+    //   border-bottom: 1px solid darken(@accentColor, 10%);
 
-      &:hover {
-        background-color: lighten(@accentColor, 10%);
-      }
-    }
+    //   &:hover {
+    //     background-color: lighten(@accentColor, 10%);
+    //   }
+    // }
   }
 
   .features {
@@ -206,7 +221,7 @@ export default {
     }
   }
 
-  .ant-btn-round.ant-btn-lg {
+  .ant-btn-lg {
     font-size: 18px;
     height: 3rem;
     padding: 0 1.5rem;
@@ -337,10 +352,10 @@ export default {
         font-size: 1.2rem;
       }
 
-      .action-button {
-        font-size: 1rem;
-        padding: 0.6rem 1.2rem;
-      }
+      // .action-button {
+      //   font-size: 1rem;
+      //   padding: 0.6rem 1.2rem;
+      // }
     }
 
     .feature {
