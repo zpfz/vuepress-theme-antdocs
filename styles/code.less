@@ -29,7 +29,7 @@
     overflow: auto;
 
     code {
-      color: #ccc;
+      color: #314659;
       padding: 0;
       background-color: transparent;
       border-radius: 0;
@@ -45,7 +45,7 @@ div[class*='language-'] {
 
   .highlight-lines {
     user-select: none;
-    padding-top: 1.3rem;
+    padding-top: 1.5rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@ div[class*='language-'] {
     line-height: 1.4;
 
     .highlighted {
-      background-color: rgba(0, 0, 0, 66%);
+      background-color: rgba(193, 193, 193, 25%);
     }
   }
 
@@ -66,7 +66,7 @@ div[class*='language-'] {
       height: 6px;
     }
     &::-webkit-scrollbar-thumb {
-      background: #4e5666;
+      background: rgb(221, 221, 221);
     }
 
   }
@@ -187,4 +187,4 @@ div[class~='language-php']:before {
   content: 'php';
 }
 
-@import '~prismjs/themes/prism-tomorrow.css';
+@import './prism-antdv.less';
