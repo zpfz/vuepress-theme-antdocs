@@ -98,8 +98,8 @@ export default {
     actionBtn() {
       const actionBtn = this.data.actionBtn
       return {
-        link: actionBtn.link,
-        text: actionBtn.text,
+        link: actionBtn.link ?? '/',
+        text: actionBtn.text ?? 'ActionBtn',
         ghost: actionBtn.ghost ?? false,
         type: actionBtn.type ?? 'primary',
         size: actionBtn.size ?? 'large',
@@ -109,8 +109,8 @@ export default {
     preactionBtn() {
       const preactionBtn = this.data.preactionBtn
       return {
-        link: preactionBtn.link,
-        text: preactionBtn.text,
+        link: preactionBtn.link ?? '/',
+        text: preactionBtn.text ?? 'PreActionBtn',
         ghost: preactionBtn.ghost ?? false,
         type: preactionBtn.type ?? 'primary',
         size: preactionBtn.size ?? 'large',
@@ -165,6 +165,7 @@ export default {
     .description,
     .action {
       margin: 1.8rem auto;
+      text-align: center;
     }
 
     .description {
