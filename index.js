@@ -1,5 +1,5 @@
-const path = require('path')
-
+const corejsVersion = require('core-js/package.json').version
+const { path,chalk } = require('@vuepress/shared-utils')
 // Theme API.
 module.exports = (options, ctx) => {
   const { sep } = path
@@ -27,6 +27,14 @@ module.exports = (options, ctx) => {
         .oneOf('modules')
         .use('less-loader')
         .options({ javascriptEnabled: true })
+      
+      try{
+        if (parseInt(corejsVersion.split('.',1)) > 2) {
+          config.resolve.alias.set('core-js/library/fn', 'core-js/features')
+        }
+      }catch(err){
+        console.log(`${chalk.blue('[AntDocs]')} path of ${chalk.green('core-js')} library convert failed: ${err}`)
+      }
     },
     alias () {
       return {
