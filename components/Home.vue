@@ -12,7 +12,7 @@
           {{ data.tagline || $description || 'Welcome to your VuePress site' }}
         </p>
 
-        <a-button :type="actionBtn.type" :shape="actionBtn.shape" :size="actionBtn.size" :ghost="actionBtn.ghost" v-if="actionBtn.text && actionBtn.link">
+        <a-button :type="actionBtn.type" :shape="actionBtn.shape" :size="actionBtn.size" :ghost="actionBtn.ghost" v-if="actionBtn">
           <a v-if="isExtlink(actionBtn.link)" :href="link(actionBtn.link)" target="_blank">
             {{ actionBtn.text }}
           </a>
@@ -20,7 +20,7 @@
             {{ actionBtn.text }}
           </RouterLink>
         </a-button>
-        <a-button :type="preactionBtn.type" :shape="preactionBtn.shape" :size="preactionBtn.size" :ghost="preactionBtn.ghost" v-if="preactionBtn.text && preactionBtn.link" class="pre-btn">
+        <a-button :type="preactionBtn.type" :shape="preactionBtn.shape" :size="preactionBtn.size" :ghost="preactionBtn.ghost" v-if="preactionBtn" class="pre-btn">
           <a v-if="isExtlink(preactionBtn.link)" :href="link(preactionBtn.link)" target="_blank">
             {{ preactionBtn.text }}
           </a>
@@ -97,25 +97,25 @@ export default {
     },
     actionBtn() {
       const actionBtn = this.data.actionBtn
-      return {
-        link: actionBtn.link ?? '/',
-        text: actionBtn.text ?? 'ActionBtn',
-        ghost: actionBtn.ghost ?? false,
-        type: actionBtn.type ?? 'primary',
-        size: actionBtn.size ?? 'large',
-        shape: actionBtn.shape ?? null
-      }
+      return actionBtn ? {
+          link: (actionBtn&&actionBtn.link) ?? '/',
+          text: (actionBtn&&actionBtn.text) ?? 'ActionBtn',
+          ghost: (actionBtn&&actionBtn.ghost) ?? false,
+          type: (actionBtn&&actionBtn.type) ?? 'primary',
+          size: (actionBtn&&actionBtn.size) ?? 'large',
+          shape: (actionBtn&&actionBtn.shape) ?? null
+        } : null
     },
     preactionBtn() {
       const preactionBtn = this.data.preactionBtn
-      return {
-        link: preactionBtn.link ?? '/',
-        text: preactionBtn.text ?? 'PreActionBtn',
-        ghost: preactionBtn.ghost ?? false,
-        type: preactionBtn.type ?? 'primary',
-        size: preactionBtn.size ?? 'large',
-        shape: preactionBtn.shape ?? null
-      }
+      return preactionBtn ? {
+        link: (preactionBtn&&preactionBtn.link) ?? '/',
+        text: (preactionBtn&&preactionBtn.text) ?? 'PreActionBtn',
+        ghost: (preactionBtn&&preactionBtn.ghost) ?? false,
+        type: (preactionBtn&&preactionBtn.type) ?? 'primary',
+        size: (preactionBtn&&preactionBtn.size) ?? 'large',
+        shape: (preactionBtn&&preactionBtn.shape) ?? null
+      } : null
     },
     footerColumn() {
       if (this.data.footerWrap && this.data.footerWrap.length) {
