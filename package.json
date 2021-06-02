@@ -1,7 +1,7 @@
 {
   "name": "vuepress-theme-antdocs",
   "title": "AntDocs of VuePress",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "An Ant Design style theme for VuePress.",
   "main": "index.js",
   "keywords": [
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/zpfz/vuepress-theme-antdocs/issues"
   },
-  "homepage": "https://antdocs.vercel.app",
+  "homepage": "https://github.com/zpfz/vuepress-theme-antdocs",
   "license": "MIT",
   "dependencies": {
     "ant-design-vue": "^1.7.4",
