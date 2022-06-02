@@ -20,10 +20,18 @@
       @click.native="$emit('toggle')"
     >
       <span>{{ item.title }}</span>
-      <span v-if="collapsable" class="arrow" :class="open ? 'down' : 'right'" />
+
+      <span v-if="collapsable" class="arrow" :class="open ? 'down' : 'right'">
+        <a-icon type="down" />
+      </span>
     </RouterLink>
 
-    <p v-else class="sidebar-heading" :class="{ open }" @click="$emit('toggle')">
+    <p
+      v-else
+      class="sidebar-heading"
+      :class="{ open }"
+      @click="$emit('toggle')"
+    >
       <span>{{ item.title }}</span>
       <span v-if="collapsable" class="arrow" :class="open ? 'down' : 'right'">
         <a-icon type="down" />
@@ -41,7 +49,7 @@
 </template>
 
 <script>
-import { isActive } from '../util'
+import { isActive } from '../util';
 
 export default {
   name: 'SidebarGroup',
@@ -50,11 +58,11 @@ export default {
 
   // ref: https://vuejs.org/v2/guide/components-edge-cases.html#Circular-References-Between-Components
   beforeCreate() {
-    this.$options.components.SidebarLinks = require('@theme/components/SidebarLinks.vue').default
+    this.$options.components.SidebarLinks = require('@theme/components/SidebarLinks.vue').default;
   },
 
   methods: { isActive }
-}
+};
 </script>
 
 <style lang="less">
@@ -107,7 +115,7 @@ export default {
 .sidebar-heading {
   display: flex;
   align-items: center;
-  color: rgba(0,0,0,.65);
+  color: rgba(0, 0, 0, 0.65);
   transition: color 0.15s ease;
   cursor: pointer;
   font-size: 14px;
@@ -116,12 +124,12 @@ export default {
   width: 100%;
   box-sizing: border-box;
   border-left: 0.25rem solid transparent;
-  transition: color .25s ease-in-out;
+  transition: color 0.25s ease-in-out;
 
-  &.open{
+  &.open {
     color: inherit;
   }
-  &:hover{
+  &:hover {
     color: @accentColor;
   }
 

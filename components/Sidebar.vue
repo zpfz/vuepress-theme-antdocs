@@ -1,20 +1,23 @@
 <template>
   <aside class="sidebar">
+    <!-- <SidebarCollapse /> -->
     <!-- Promo ADs here -->
     <Promo v-if="this.$themeConfig.ads"/>
-    <!-- <slot name="top" /> -->
+    <slot name="top" />
     <SidebarLinks :depth="0" :items="items" />
-    <!-- <slot name="bottom" /> -->
+    <slot name="bottom" />
   </aside>
 </template>
 
 <script>
 import SidebarLinks from '@theme/components/SidebarLinks.vue';
 import Promo from '@theme/components/Promo.vue';
+// import SidebarCollapse from '@theme/components/SidebarCollapse.vue';
 
 export default {
   name: 'Sidebar',
   components: { 
+    // SidebarCollapse,
     SidebarLinks,
     Promo
   },
@@ -26,6 +29,7 @@ export default {
 @import '../styles/palette.less';
 
 .sidebar {
+
   ul {
     padding: 0;
     margin: 0;
