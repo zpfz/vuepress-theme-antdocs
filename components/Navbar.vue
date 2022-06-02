@@ -2,7 +2,7 @@
   <header class="navbar">
     <a-row>
       <NavButton />
-      <a-col :xs="24" :sm="24" :md="6" :lg="5" :xl="5" :xxl="4">
+      <a-col :xs="24" :sm="24" :md="6" :lg="6" :xl="5" :xxl="4">
         <RouterLink :to="$localePath" :class="{'no-logo': !$site.themeConfig.logo ? true : false,'home-link': true}">
           <img v-if="$site.themeConfig.logo" class="logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle" />
           <span v-if="$siteTitle" ref="siteName" class="site-name">{{ $siteTitle }}</span>
@@ -12,7 +12,7 @@
           class="mobile-search"
         />
       </a-col>
-      <a-col :xs="0" :sm="0" :md="18" :lg="19" :xl="19" :xxl="20">
+      <a-col :xs="0" :sm="0" :md="18" :lg="18" :xl="19" :xxl="20">
         <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
         <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
         <NavLinks class="can-hide" />
@@ -63,7 +63,7 @@ export default {
     }
   },
   created() {
-    this.$store.state.navStyle = 'horizontal'
+    this.$store.state.global.navStyle = 'horizontal'
   },
   methods: {
     isOpenDrawer() {
@@ -90,10 +90,6 @@ export default {
       )
     },
 
-    // isLoad() {
-    //   return this.$page.path !== '/' && !this.shouldShowSidebar
-    // },
-
     sidebarItems() {
       return resolveSidebarItems(this.$page, this.$page.regularPath, this.$site, this.$localePath)
     }
@@ -108,7 +104,7 @@ export default {
   transform: translateX(@sidebarWidth * 0.82) ;
 }
 .navbar {
-  line-height: 4rem;
+  line-height: @navbarHeight;
 
   a,
   span,

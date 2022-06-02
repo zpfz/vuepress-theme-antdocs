@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     showMenu() {
-      this.$store.state.navStyle = 'inline';
+      this.$store.state.global.navStyle = 'inline';
       this.popover_visible = true;
     }
   }
