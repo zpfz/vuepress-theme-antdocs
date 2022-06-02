@@ -15,6 +15,28 @@ export function getHash (path) {
     return match[0]
   }
 }
+export function getLocalStorage(name, type) {
+  if (typeof localStorage === 'undefined') return;
+  let data = localStorage.getItem(name)
+  if (type === 'number') {
+    return Number(data)
+  }
+  if (type === 'boolen') {
+    if (data === 'false') {
+      data = false
+    } else if (data === 'true'){
+      data = true
+    }else{
+      data = false
+    }
+    return data
+  }
+  if(type === 'object'){
+    data = JSON.parse(data)
+    return data
+  }
+  return data
+}
 
 export function isExternal (path) {
   return outboundRE.test(path)
