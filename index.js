@@ -13,8 +13,6 @@ module.exports = (options, ctx) => {
         .some(base => themeConfig.locales[base].algolia)
   )
 
-  const enableSmoothScroll = themeConfig.smoothScroll === true
-
   return {
     chainWebpack: config=> {
       config.module
@@ -70,8 +68,7 @@ module.exports = (options, ctx) => {
         type: 'details',
         before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
         after: () => '</details>\n'
-      }],
-      ['smooth-scroll', enableSmoothScroll]
+      }]
     ]
   }
 }
