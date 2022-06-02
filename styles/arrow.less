@@ -1,15 +1,9 @@
 @import './config.less';
 .arrow {
   display: inline-block;
-  opacity: .7;
   transition: transform .25s ease-in-out;
   font-size: 14px;
-
-  &.up {
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 6px solid @arrowBgColor;
-  }
+  font-weight: 600;
 
   &.down {
     transform: rotate(0deg);
@@ -19,9 +13,4 @@
     transform: rotate(-90deg);
   }
 
-  &.left {
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    border-right: 6px solid @arrowBgColor;
-  }
 }

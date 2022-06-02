@@ -7,11 +7,18 @@
     color: rgba(0, 0, 0, 0.65);
   }
 
+
   &.tip, &.warning, &.danger {
     padding: 0.1rem 1.5rem;
-    border-left-width: 0.4rem;
+    border-left-width: 0.3rem;
     border-left-style: solid;
     margin: 1rem 0;
+
+    p{
+      &:last-child{
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   &.tip {
