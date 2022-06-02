@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="data">
     <div class="promo">
       <!-- Promo state 1 -->
       <div v-if="data.style === 1" @click="gotoLink" id="promo_1">
@@ -24,7 +24,7 @@
         }}</a-button>
       </div>
     </div>
-    <a-divider v-if="data" dashed id="reset-margin" />
+    <a-divider dashed id="reset-margin" />
   </div>
 </template>
 
@@ -87,6 +87,7 @@ export default {
       margin-bottom: 0.9375rem;
     }
   }
+
 }
 
 #reset-margin {
