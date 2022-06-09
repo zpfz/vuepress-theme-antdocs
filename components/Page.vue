@@ -1,5 +1,5 @@
 <template>
-  <main :class="['page', { 'has-page-anchor': hasPageAnchor }]">
+  <main  :class="['page', { 'has-page-anchor': hasPageAnchor }]">
     <slot name="top" />
 
     <Content class="theme-antdocs-content" />
@@ -17,25 +17,31 @@ import PageEdit from '@theme/components/PageEdit.vue';
 import PageNav from '@theme/components/PageNav.vue';
 import PageAnchor from '@theme/components/PageAnchor.vue';
 
-import { getLocalStorage } from '../util/index';
+// import { getLocalStorage } from '../util/index';
 
 export default {
   components: { PageEdit, PageNav, PageAnchor },
   props: ['sidebarItems'],
   computed: {
     hasPageAnchor() {
-      if (this.pageAnchorConfig.isDisabled) {
+      if (this.pageAnchorConfig.isDisabled){
+        this.$store.state.global.isCollapsePageAnchor = true;
         return false;
-      } else {
-        if (this.$page.headers) {
-          return this.$store.state.global.isCollapsePageAnchor ||
-            getLocalStorage('isCollapsePageAnchor', 'boolen')
-            ? false
-            : true;
-        } else {
-          return false;
-        }
+      } 
+      if (!this.$page.headers) {
+        this.$store.state.global.isCollapsePageAnchor = true;
+        return false;
       }
+      this.$store.state.global.isCollapsePageAnchor = false;
+      return true;
+      // if (this.$page.headers) {
+      //   return this.$store.state.global.isCollapsePageAnchor ||
+      //     getLocalStorage('isCollapsePageAnchor', 'boolen')
+      //     ? false
+      //     : true;
+      // } else {
+      //   return false;
+      // }
     },
     pageAnchorConfig() {
       return (
@@ -53,7 +59,7 @@ export default {
 .page {
   padding-bottom: 2rem;
   display: block;
-  transition: padding-right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  // transition: padding-right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 
   .ant-btn {
     border-bottom-right-radius: 0;

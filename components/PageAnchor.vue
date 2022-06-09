@@ -3,11 +3,12 @@
     :class="['page-anchor', { 'collapse-page-anchor': isCollapsePageAnchor }]"
     v-if="hasHeaders"
   >
+
     <a-space direction="vertical" size="large" style="width:100%;">
-      <a-button @click="collapsePageAnchor" shape="circle">
+      <!-- <a-button @click="collapsePageAnchor" shape="circle">
         <a-icon v-if="isCollapsePageAnchor" type="left" />
         <a-icon v-else type="right" />
-      </a-button>
+      </a-button> -->
 
       <a-anchor class="page-anchor-offset">
         <template v-for="(item, index) in filterHeadersByLevel">
@@ -40,21 +41,21 @@
 </template>
 
 <script>
-import { getLocalStorage } from '../util/index';
+// import { getLocalStorage } from '../util/index';
 export default {
   data() {
     return {
       headersList: [],
-      isCollapsePageAnchor: false
+      // isCollapsePageAnchor: false
     };
   },
   methods: {
-    collapsePageAnchor() {
-      this.isCollapsePageAnchor = !this.isCollapsePageAnchor;
-      this.$store.state.global.isCollapsePageAnchor = this.isCollapsePageAnchor;
-      if (typeof localStorage === 'undefined') return;
-      localStorage.setItem('isCollapsePageAnchor', this.isCollapsePageAnchor);
-    },
+    // collapsePageAnchor() {
+    //   this.isCollapsePageAnchor = !this.isCollapsePageAnchor;
+    //   this.$store.state.global.isCollapsePageAnchor = this.isCollapsePageAnchor;
+    //   if (typeof localStorage === 'undefined') return;
+    //   localStorage.setItem('isCollapsePageAnchor', this.isCollapsePageAnchor);
+    // },
     arrayToTree(arr, parent) {
       return arr.reduce((res, current) => {
         if (current['parent'] === parent) {
@@ -78,6 +79,9 @@ export default {
         this.$themeConfig.pageAnchor || { anchorDepth: 2, isDisabled: false }
       );
     },
+    isCollapsePageAnchor(){
+      return this.$store.state.global.isCollapsePageAnchor
+    },
     filterHeadersByLevel2() {
       const { headers } = this.$page;
       let headersList;
@@ -87,7 +91,6 @@ export default {
       });
       return headersList;
     },
-
     filterHeadersByLevel() {
       if (this.pageAnchorConfig.anchorDepth === 1) {
         return this.filterHeadersByLevel2;
@@ -112,12 +115,12 @@ export default {
       return this.arrayToTree(headersList, 0);
     }
   },
-  mounted() {
-    this.isCollapsePageAnchor = getLocalStorage(
-      'isCollapsePageAnchor',
-      'boolen'
-    );
-  }
+  // mounted() {
+  //   this.isCollapsePageAnchor = getLocalStorage(
+  //     'isCollapsePageAnchor',
+  //     'boolen'
+  //   );
+  // }
 };
 </script>
 
@@ -130,15 +133,15 @@ export default {
   top: @navbarHeight + 3.5rem;
   right: 1.25rem;
   z-index: 999;
-  transition: right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  // transition: right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 
   .anticon {
     margin-top: -3px;
   }
 
-  .ant-anchor-wrapper {
-    transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
+  // .ant-anchor-wrapper {
+  //   transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  // }
 
   .page-anchor-offset {
     padding-left: 6px;
@@ -146,12 +149,12 @@ export default {
     overflow-y: auto;
   }
 }
-.collapse-page-anchor {
-  right: -10.5rem;
+// .collapse-page-anchor {
+//   right: -10.5rem;
 
-  .ant-anchor-wrapper {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
+//   .ant-anchor-wrapper {
+//     opacity: 0;
+//     visibility: hidden;
+//   }
+// }
 </style>
