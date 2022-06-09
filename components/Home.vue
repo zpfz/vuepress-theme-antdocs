@@ -164,7 +164,7 @@ export default {
 
     .hero-logo {
       max-width: 100%;
-      max-height: 180px;
+      max-height: 250px;
       display: block;
       margin: 5rem auto 1.5rem;
     }

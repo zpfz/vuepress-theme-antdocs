@@ -206,8 +206,8 @@ export default {
   //   }
   // }
 
-  // a{
-  //   color: var(--color-text-1);
-  // }
+  a{
+    color: inherit;
+  }
 }
 </style>

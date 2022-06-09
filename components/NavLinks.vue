@@ -5,6 +5,7 @@
       id="nav"
       v-model="currentPage"
       :selectable="false"
+      :forceSubMenuRender="true"
     >
       <template v-for="item in userLinks">
         <a-sub-menu v-if="item.type === 'links'" :key="link(item.link)">
@@ -260,7 +261,7 @@ export default {
 .nav-links {
   display: flex;
   align-items: center;
-  float: right;
+  // float: right;
   margin-right: 2rem;
   font-size: 1rem;
 
@@ -284,6 +285,7 @@ export default {
     display: flex;
     align-items: center;
     list-style-type: none;
+    // line-height: inherit;
     padding: 0;
     margin: 0;
 

@@ -1,6 +1,6 @@
 const state = {
   navStyle: '',
-  isCollapsePageAnchor: undefined,
+  isCollapsePageAnchor: false,
 }
 
 

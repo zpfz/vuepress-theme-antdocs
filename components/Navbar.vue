@@ -12,7 +12,7 @@
           class="mobile-search"
         />
       </a-col>
-      <a-col :xs="0" :sm="0" :md="18" :lg="18" :xl="19" :xxl="20">
+      <a-col :xs="0" :sm="0" :md="18" :lg="18" :xl="19" :xxl="20" class="nav-space-between">
         <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
         <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
         <NavLinks class="can-hide" />
@@ -92,7 +92,7 @@ export default {
 
     sidebarItems() {
       return resolveSidebarItems(this.$page, this.$page.regularPath, this.$site, this.$localePath)
-    }
+    },
   }
 }
 </script>
@@ -162,6 +162,11 @@ export default {
     top: 0;
     left: 0;
     z-index: 2;
+  }
+
+  .nav-space-between{
+    display: flex;
+    justify-content: space-between;
   }
 }
 .sidebarWrap {
