@@ -22,51 +22,55 @@
                 v-for="childSubItem in subItem.items"
                 :key="link(childSubItem.link)"
               >
+                <RouterLink v-if="isInternal(childSubItem.link,childSubItem.target)" :to="link(childSubItem.link)">
+                  {{ childSubItem.text }}
+                </RouterLink>
                 <a
-                  v-if="isExtlink(childSubItem.link)"
+                  v-else
                   :href="childSubItem.link"
-                  target="_blank"
+                  :target="target(childSubItem.target,childSubItem.link)"
                   rel="noopener noreferrer"
                 >
                   {{ childSubItem.text }}
-                  <a-icon type="link" />
+                  <a-icon type="link" v-if="!isInternal(childSubItem.link,childSubItem.target)"/>
                 </a>
-                <RouterLink v-else :to="link(childSubItem.link)">
-                  {{ childSubItem.text }}
-                </RouterLink>
+                
               </a-menu-item>
             </a-menu-item-group>
+
             <a-menu-item :key="link(subItem.link)" v-else>
+              <RouterLink v-if="isInternal(subItem.link,subItem.target)" :to="link(subItem.link)">
+                {{ subItem.text }}
+              </RouterLink>
               <a
-                v-if="isExtlink(subItem.link)"
+                v-else
                 :href="subItem.link"
-                target="_blank"
+                :target="target(subItem.target,subItem.link)"
                 rel="noopener noreferrer"
               >
                 {{ subItem.text }}
-                <a-icon type="link" />
+                <a-icon type="link" v-if="!isInternal(subItem.link,subItem.target)"/>
               </a>
-              <RouterLink v-else :to="link(subItem.link)">
-                {{ subItem.text }}
-              </RouterLink>
             </a-menu-item>
           </template>
         </a-sub-menu>
         <a-menu-item :key="link(item.link)" v-else>
-          <a
-            v-if="isExtlink(item.link)"
-            :href="link(item.link)"
-            target="_blank"
-          >
-            {{ item.text }}
-            <a-icon type="link" />
-          </a>
-          <RouterLink v-else :to="link(item.link)">
+          <RouterLink v-if="isInternal(item.link,item.target)" :to="link(item.link)">
             {{ item.text }}
           </RouterLink>
+          <a
+            v-else
+            :href="link(item.link)"
+            :target="target(item.target,item.link)"
+          >
+            {{ item.text }}
+            <a-icon type="link" v-if="!isInternal(item.link,item.target)"/>
+          </a>
+          
         </a-menu-item>
       </template>
     </a-menu>
+
     <ul class="extra-group">
       <li v-if="repoLink">
         <a-tooltip placement="bottom">
@@ -115,9 +119,22 @@ export default {
     );
   },
   methods: {
-    isExtlink(path) {
+    isBlankTarget (target) {
+      return target === '_blank' ? true : false
+    },
+
+    isExternal(path) {
       const Reg = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\*\+,;=.]+$/;
       return Reg.test(path);
+    },
+    isInternal (path,target) {
+      return !this.isExternal(path) && !this.isBlankTarget(target)
+    },
+    target (target,path) {
+      if (target) {
+        return target
+      }
+      return this.isExternal(path) ? '_blank' : ''
     },
     link(url) {
       url = typeof url === 'undefined' ? '' : url;
