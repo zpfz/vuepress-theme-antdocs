@@ -61,20 +61,20 @@ export default {
   display: block;
   // transition: padding-right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-  .ant-btn {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    box-shadow: -1px 0 5px 0 #0000001a;
-  }
+  // .ant-btn {
+  //   border-bottom-right-radius: 0;
+  //   border-top-right-radius: 0;
+  //   box-shadow: -1px 0 5px 0 #0000001a;
+  // }
 }
 .has-page-anchor {
   padding-right: 12.5rem;
 
-  .ant-btn {
-    border-bottom-right-radius: 50%;
-    border-top-right-radius: 50%;
-    box-shadow: unset;
-  }
+  // .ant-btn {
+  //   border-bottom-right-radius: 50%;
+  //   border-top-right-radius: 50%;
+  //   box-shadow: unset;
+  // }
 }
 
 @media (max-width: @MQMobile) {
