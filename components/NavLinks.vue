@@ -278,7 +278,7 @@ export default {
 .nav-links {
   display: flex;
   align-items: center;
-  // float: right;
+  float: right;
   margin-right: 2rem;
   font-size: 1rem;
 

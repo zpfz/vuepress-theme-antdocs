@@ -164,10 +164,10 @@ export default {
     z-index: 2;
   }
 
-  .nav-space-between{
-    display: flex;
-    justify-content: space-between;
-  }
+  // .nav-space-between{
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 }
 .sidebarWrap {
   .ant-drawer-content-wrapper {
